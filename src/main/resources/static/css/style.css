@@ -1,0 +1,45 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.logo{
+	width: 30px;
+	height: 30px;
+}
+.navlogo{
+	margin-left: 70px;
+}
+.navitems{
+	margin-left: auto;
+	margin-right: 70px;
+}
+.navitem{
+	margin-right: 30px;
+}
+.count{
+	position: relative;
+	top: -15px;
+}
+.cat{
+	width: 100%;
+	height: 200px;
+}
+.food{
+	float: right;
+}
+.form{
+	margin: auto;
+}
+.formbutton{
+	text-align: right;
+}
+.error{
+	color: red;
+}
+.foodList{
+	line-height: 60px;
+}
+.foodListImg{
+	width:60px;
+	height: 60px;
+}

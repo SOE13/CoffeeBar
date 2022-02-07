@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http//www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+<link rel="stylesheet"
+	href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+<body>
+
+	<!-- navigation -->
+	<div th:replace="components/component::navbar"></div>
+
+
+	<div class="container mt-5">
+		<div>
+
+
+			<table class="table table-bordered table-hover text-center">
+				<thead >
+					<tr>
+						<th scope="col">NO</th>
+						<th scope="col">Name</th>
+						<th scope="col">Image</th>
+						<th scope="col">Count</th>
+						<th scope="col">Price</th>
+					</tr>
+				</thead>
+				<tbody class="foodList">
+					<tr th:each="sellFood,i:${sellFoodList}">
+						<td th:text="${i.index+1}"></td>
+						<td th:text="${sellFood.foods.name}"></td>
+						<td>
+						<img class="foodListImg" th:src="@{${sellFood.foods.img}}">
+						</td>
+						<td th:text="${sellFood.count}"></td>
+						<td><span th:text="${sellFood.foods.price}"></span> MMK</td>
+					</tr>
+					<tr>
+						<td colspan="3">Total</td>
+						<td th:text="${totalcount}"></td>
+						<td> <span th:text="${totalprice}"></span> MMK</td>
+					</tr>
+				</tbody>
+			</table>
+
+
+		</div>
+	</div>
+
+	<script th:src="@{/js/main.js}"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

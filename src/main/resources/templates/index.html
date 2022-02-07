@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http//www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" >
+</head>
+<body>
+
+<!-- navigation -->
+<div th:replace="components/component::navbar"></div>
+
+
+		<div class="container mt-5">
+			<div class="row">
+			
+			
+				<div class="col-md-3 mb-5">
+					<div class="card">
+						<div class="card-header text-center">Cake</div>
+						<div class="card-body">
+							<a th:href="@{/food/4}"><img class="cat" th:src="@{/img/cat/cake.png}"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 mb-5">
+					<div class="card">
+						<div class="card-header text-center">Coffee</div>
+						<div class="card-body">
+							<a th:href="@{/food/1}"><img class="cat" th:src="@{/img/cat/coffee.jpg}"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 mb-5">
+					<div class="card">
+						<div class="card-header text-center">Foods</div>
+						<div class="card-body">
+							<a th:href="@{/food/5}"><img class="cat" th:src="@{/img/cat/food.jpg}"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 mb-5">
+					<div class="card">
+						<div class="card-header text-center">Juice</div>
+						<div class="card-body">
+							<a th:href="@{/food/3}"><img class="cat" th:src="@{/img/cat/juce.jfif}"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 mb-5">
+					<div class="card">
+						<div class="card-header text-center">Milk-tea</div>
+						<div class="card-body">
+							<a th:href="@{/food/2}"><img class="cat" th:src="@{/img/cat/milk-tea.jfif}"></a>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+
+
+<script th:src="@{/js/main.js}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

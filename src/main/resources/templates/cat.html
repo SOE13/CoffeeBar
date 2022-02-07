@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http//www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" >
+</head>
+<body>
+
+<!-- navigation -->
+<div th:replace="components/component::navbar"></div>
+
+
+<div class="container mt-5">
+			<div class="row">
+			
+			
+				<div class="col-md-3 mb-5" th:each="food:${foodList}">
+					<div class="card">
+						<div class="card-header text-center" th:text="${food.name}">Boka-Milk Tea</div>
+						<div class="card-body">
+							<img class="cat" th:src="@{${food.img}}">
+						</div>
+						<div>
+						<div class="card-footer">
+							<span th:text="${food.price}"></span> MMK
+								<button th:onclick="addToCart([[${food.id}]])" class="btn btn-primary btn-sm food">
+								<i class="fas fa-shopping-cart"></i></button>
+						</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				
+				
+			</div>
+		</div>
+
+
+<script th:src="@{/js/main.js}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

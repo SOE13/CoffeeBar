@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http//www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- navigation start-->
+<div th:fragment="navbar">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand navlogo" th:href="@{/}">
+   	<img class="logo" th:src="@{/img/logo.png}"> Coffee-Bar
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+    data-bs-target="#navbarNav" aria-controls="navbarNav" 
+    aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNav">
+      <ul class="navbar-nav navitems">
+        <li class="nav-item navitem">
+          <a class="nav-link active" aria-current="page" th:href="@{/}"><i class="fa fa-home" aria-hidden="true"></i></a>
+        </li>
+        <li class="nav-item navitem">
+          <a class="nav-link" th:href="@{/showAllCat}">
+          <i class="fas fa-shopping-cart">
+         	 <span class="badge rounded-pill bg-danger count" id="food-count"></span>
+          </i>
+          </a>
+        </li>
+        <li class="nav-item navitem">
+          <a class="nav-link" th:href="@{/recordSell}"><i class="fas fa-cash-register"></i></a>
+        </li>
+         <li class="nav-item navitem">
+          <a class="nav-link " th:href="@{/foodList}"><i class="fas fa-list"></i></a>
+        </li>
+        <li class="nav-item navitem">
+          <a class="nav-link " th:href="@{/addNewFood}"><i class="fas fa-plus-square"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+<!-- navigation end-->
+
+
+
+
+</body>
+</html>
